@@ -1,8 +1,11 @@
 let burger = document.querySelector(".fa-bars");
-console.log(burger)
 burger.onclick = () => {
   document.querySelector(".header .links").classList.toggle("show")
-  console.log(document.querySelector(".links"))
+}
+window.onscroll = () => {
+  if (window.innerHeight > 0) {
+    document.querySelector(".header .links").classList.remove("show")
+  }
 }
 // observe element
 let observer = new IntersectionObserver((items) => {
@@ -20,7 +23,6 @@ let observer = new IntersectionObserver((items) => {
 
 let hiddenElements = document.querySelectorAll(".hidden-observe");
 hiddenElements.forEach((el) => observer.observe(el));
-console.log(hiddenElements)
 // footer-copy-right
 const d = new Date();
 let copyRight = document.querySelector("#copy-right").innerText=`${d.getFullYear()}`;
