@@ -29,6 +29,7 @@ body {
   font-family: "Work Sans", sans-serif;
   padding: 0;
   margin: 0;
+
 }
 
 .container {
@@ -38,11 +39,7 @@ body {
   margin-right: auto;
 }
 
-@media (min-width: 350px) {
-  .container {
-    width: 375px;
-  }
-}
+
 
 /*  Small  */
 
@@ -283,7 +280,18 @@ transition: .3s width;
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-30%, -50%);
+  transform: translate(-50%, -50%);
+  border: 1px solid #10cab782;
+  border-right: none;
+}
+.landing .intro-text::before {
+  content: "LEON";
+  position: absolute;
+  top: 25px;
+  right: -32px;
+  color: #10cab7;
+  rotate: 90deg;
+  font-size: 30px;
 }
 @media (max-width: 767px) {
   .landing .intro-text img {
@@ -292,11 +300,9 @@ transition: .3s width;
 }
 .landing .hidden-observe {
   opacity: 0;
-  transform: translateY(20%);
 }
 .landing .show-observe {
-  transition: 1s transform, opacity 1.5s;
-  transform: translateY(0px);
+  transition: opacity 1.5s;
   opacity: 1;
 }
 /* End Landing Section */
@@ -419,11 +425,11 @@ transition: .3s width;
 }
 .services .hidden-observe {
   opacity: 0;
-  transform: translateX(50%);
+  transform: translateY(20%);
 }
 .services .show-observe {
   transition: 1s transform, opacity 1s;
-  transform: translateX(0px);
+  transform: translateY(0px);
   opacity: 1;
 }
 /* team */
@@ -936,11 +942,11 @@ transition: .3s width;
 }
 .plans .hidden-observe {
   opacity: 0;
-  transform: translateX(-20%);
+  transform: translateY(20%);
 }
 .plans .show-observe {
   transition: .6s transform, .6s opacity;
-  transform: translateX(0%);
+  transform: translateY(0%);
   opacity: 1;
 }
 .plans .show-observe:nth-child(1) {
@@ -1005,10 +1011,10 @@ resize: none;
 }
 .contact-description .hidden-observe {
   opacity: 0;
-  transform: translateX(-20%);
+  transform: translateY(-20%);
 }
 .contact-description form.hidden-observe {
-  transform: translateX(25%)
+  transform: translateY(25%)
 }
 .contact-description img.hidden-observe {
   transform: translateY(-30%)
