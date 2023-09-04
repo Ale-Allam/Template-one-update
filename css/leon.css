@@ -281,18 +281,11 @@ transition: .3s width;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  border: 1px solid #10cab782;
-  border-right: none;
+  border: 1px solid #10cab7;
+  border-left: none;
+  border-top: none;
 }
-.landing .intro-text::before {
-  content: "LEON";
-  position: absolute;
-  top: 25px;
-  right: -32px;
-  color: #10cab7;
-  rotate: 90deg;
-  font-size: 30px;
-}
+
 @media (max-width: 767px) {
   .landing .intro-text img {
     width: 200px;
